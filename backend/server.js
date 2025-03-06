@@ -31,11 +31,8 @@ app.use(trackAPIStats);
 // CORS Configuration
 app.use(cors({
   origin: [
+    'https://realestate-mocha-eight.vercel.app',
     'https://realestate-fa0y.onrender.com',
-    'https://real-estate-website-backend-fullcode.onrender.com',
-    'https://real-estate-website-sepia-two.vercel.app',
-    'https://real-estate-backend-gamma-nine.vercel.app',
-    'https://real-estate-website-admin.onrender.com',
     'http://localhost:5174',
     'http://localhost:5173',
   ],
