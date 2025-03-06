@@ -21,7 +21,8 @@ export const Backendurl = import.meta.env.VITE_API_BASE_URL;
 
 const App = () => {
   return (
-    <AuthProvider>
+    <AuthProvider >
+      <div className="w-full min-h-screen bg-orange-50">
     <Router>
       <Navbar />
       <Routes>
@@ -39,6 +40,7 @@ const App = () => {
       <Footer />
       <ToastContainer />
     </Router>
+    </div>
     </AuthProvider>
   )
 }

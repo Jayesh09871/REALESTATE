@@ -48,12 +48,12 @@ const FilterSection = ({ filters, setFilters, onApplyFilters }) => {
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center space-x-2">
-          <Filter className="w-5 h-5 text-blue-600" />
+          <Filter className="w-5 h-5 text-orange-600" />
           <h2 className="text-lg font-semibold">Filters</h2>
         </div>
         <button
           onClick={handleReset}
-          className="text-sm text-blue-600 hover:text-blue-700"
+          className="text-sm text-orange-600 hover:text-orange-700"
         >
           Reset All
         </button>
@@ -75,7 +75,7 @@ const FilterSection = ({ filters, setFilters, onApplyFilters }) => {
                 })}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all
                   ${filters.propertyType === type.toLowerCase()
-                    ? "bg-blue-600 text-white"
+                    ? "bg-green-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
               >
                 {type}
@@ -97,7 +97,7 @@ const FilterSection = ({ filters, setFilters, onApplyFilters }) => {
                 onClick={() => handlePriceRangeChange(min, max)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all
                   ${filters.priceRange[0] === min && filters.priceRange[1] === max
-                    ? "bg-blue-600 text-white"
+                    ? "bg-green-600 text-white"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
               >
                 {label}
@@ -112,7 +112,7 @@ const FilterSection = ({ filters, setFilters, onApplyFilters }) => {
         <div className="flex space-x-4 mt-8">
           <button
             onClick={() => onApplyFilters(filters)}
-            className="flex-1 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 
+            className="flex-1 bg-orange-600 text-white py-3 rounded-lg hover:bg-green-700 
               transition-colors font-medium"
           >
             Apply Filters

@@ -27,7 +27,7 @@ const PropertyCard = ({ property, onViewDetails }) => {
           {property.location}
         </div>
         <div className="flex items-center justify-between">
-          <div className="flex items-center text-blue-600 font-semibold">
+          <div className="flex items-center text-green-600 font-semibold">
             <IndianRupee className="h-4 w-4 mr-1" />
             {property.price.toLocaleString('en-IN')}
           </div>
@@ -105,7 +105,7 @@ const PropertiesShow = ({ onViewDetails }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="py-20 bg-gray-50"
+      className="py-20 bg-orange-50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">

@@ -12,12 +12,12 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className='mt-16'>
+    <div className='mt-16 bg-orange-50'>
       <div className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
-            backgroundImage: `url(${aboutimage})`,
+            backgroundImage: `url('https://cdn.vectorstock.com/i/500p/02/16/city-at-sunset-in-flat-style-vector-51140216.avif')`,
             transform: `translateY(${scrollY * 0.5}px)`,
           }}
         >

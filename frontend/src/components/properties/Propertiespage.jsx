@@ -144,7 +144,7 @@ const PropertiesPage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen bg-gray-50 pt-16"
+      className="min-h-screen bg-orange-50 pt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <motion.header
@@ -179,14 +179,14 @@ const PropertiesPage = () => {
           </AnimatePresence>
 
           <div className={`${viewState.showFilters ? "lg:col-span-3" : "lg:col-span-4"}`}>
-            <div className="bg-white p-4 rounded-lg shadow-sm mb-6">
-              <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className=" p-4 rounded-lg shadow-sm mb-6">
+              <div className="flex flex-col sm:flex-row items-center gap-4 ">
                 <SearchBar
                   onSearch={(query) => setFilters(prev => ({ ...prev, searchQuery: query }))}
-                  className="flex-1"
+                  className="flex-1 "
                 />
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 ">
                   <select
                     value={filters.sortBy}
                     onChange={(e) => setFilters(prev => ({
@@ -207,7 +207,7 @@ const PropertiesPage = () => {
                         ...prev,
                         showFilters: !prev.showFilters
                       }))}
-                      className="p-2 rounded-lg hover:bg-gray-100"
+                      className="p-2 rounded-lg hover:bg-orange-50"
                       title="Toggle Filters"
                     >
                       <SlidersHorizontal className="w-5 h-5" />
@@ -215,7 +215,7 @@ const PropertiesPage = () => {
                     <button
                       onClick={() => setViewState(prev => ({ ...prev, isGridView: true }))}
                       className={`p-2 rounded-lg ${
-                        viewState.isGridView ? "bg-blue-100 text-blue-600" : "hover:bg-gray-100"
+                        viewState.isGridView ? "bg-blue-100 text-blue-300" : "hover:bg-gray-100"
                       }`}
                     >
                       <Grid className="w-5 h-5" />
@@ -253,7 +253,7 @@ const PropertiesPage = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="col-span-full text-center py-12 bg-white rounded-lg shadow-sm"
+                    className="col-span-full text-center py-12 bg-orange-200 rounded-lg shadow-sm"
                   >
                     <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                     <h3 className="text-lg font-medium text-gray-900 mb-2">

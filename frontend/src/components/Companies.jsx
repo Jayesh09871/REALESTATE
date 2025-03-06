@@ -10,7 +10,7 @@ const Companies = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="bg-white rounded-lg shadow-xl pb-12"
+        className="bg-orange-100 rounded-lg shadow-xl pb-12"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-center text-lg font-semibold text-gray-900">Trusted by 200+ companies</h2>

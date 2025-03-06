@@ -45,15 +45,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200 fixed inset-x-0 top-0 z-50">
+    <nav className="bg-transparent backdrop-blur-md border-b border-gray-200 fixed inset-x-0 top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className=" p-2 rounded-lg">
-              <img src={logo} alt="logo" className="w-6 h-6 text-white" />
+              <img src={logo} alt="logo" className="w-6 h-6 text-white " />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
               REALSTATE
             </span>
           </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
 
                   {/* Dropdown Menu */}
                   {isDropdownOpen && (
-                    <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-lg py-2 border border-gray-100">
+                    <div className="absolute right-0 mt-2 w-64 bg-orange-50 rounded-xl shadow-lg py-2 border border-gray-100">
                       <div className="px-4 py-3 border-b border-gray-100">
                         <p className="text-sm font-semibold text-gray-900">
                           {user?.name}
@@ -114,7 +114,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                     to="/signup"
-                    className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200"
+                    className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-200"
                   >
                     Get started
                   </Link>

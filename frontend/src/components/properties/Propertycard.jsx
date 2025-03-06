@@ -60,7 +60,7 @@ const PropertyCard = ({ property, viewType }) => {
       exit={{ opacity: 0, y: 20 }}
       whileHover={{ y: -5 }}
       transition={{ duration: 0.3 }}
-      className={`group bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300
+      className={`group bg-gradient-to-br from-orange-100 to-white rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300
         ${isGrid ? 'flex flex-col' : 'flex flex-row gap-6'}`}
       onClick={handleNavigateToDetails}
       onMouseEnter={() => setShowControls(true)}
@@ -135,7 +135,7 @@ const PropertyCard = ({ property, viewType }) => {
           <motion.span 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-gradient-to-r from-blue-600 to-blue-500 text-white 
+            className="bg-gradient-to-r from-green-600 to-green-500 text-white 
               px-3 py-1 rounded-full text-sm font-medium shadow-lg"
           >
             {property.type}
@@ -174,8 +174,8 @@ const PropertyCard = ({ property, viewType }) => {
             <div className="flex-1">
               <p className="text-sm text-gray-500 mb-1">Price</p>
               <div className="flex items-center gap-1">
-                <IndianRupee className="w-5 h-5 text-blue-600" />
-                <span className="text-2xl font-bold text-blue-600">
+                <IndianRupee className="w-5 h-5 text-green-600" />
+                <span className="text-2xl font-bold text-green-600">
                   {Number(property.price).toLocaleString('en-IN')}
                 </span>
               </div>
@@ -201,7 +201,7 @@ const PropertyCard = ({ property, viewType }) => {
           <div className="flex flex-col items-center gap-1 bg-blue-50 p-2 rounded-lg">
             <Maximize className="w-5 h-5 text-blue-600" />
             <span className="text-sm font-medium text-gray-600">
-              {property.sqft} sqft
+              {property.sqft} 
             </span>
           </div>
         </div>
