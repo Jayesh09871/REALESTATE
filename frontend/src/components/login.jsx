@@ -51,14 +51,21 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center px-4 py-12"
+    style={{
+      backgroundImage: `url('https://cdn.vectorstock.com/i/500p/95/08/evening-city-near-the-river-vector-6469508.avif')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      
+      
+    }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0 }}
         className="w-full max-w-md"
       >
-        <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl p-8 mt-14">
+        <div className="bg-transparent  backdrop-blur-lg rounded-2xl shadow-xl p-8 mt-14">
           {/* Logo & Title */}
           <div className="text-center mb-8">
             <Link to="/" className="inline-block">
@@ -83,7 +90,7 @@ const Login = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
+                className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 outline-none bg-transparent placeholder-gray-700 transition-all duration-200"
                 placeholder="name@company.com"
               />
             </div>
@@ -101,13 +108,13 @@ const Login = () => {
                   required
                   value={formData.password}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 outline-none bg-transparent placeholder-gray-700 transition-all duration-200"
                   placeholder="••••••••"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800 transition-colors"
                 >
                   {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
                 </button>
@@ -118,7 +125,7 @@ const Login = () => {
             <div className="flex items-center justify-end">
               <Link 
                 to="/forgot-password"
-                className="text-sm text-blue-600 hover:text-blue-700 transition-colors"
+                className="text-sm text-black hover:text-blue-700 transition-colors"
               >
                 Forgot password?
               </Link>
@@ -128,7 +135,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center space-x-2 font-medium shadow-lg shadow-blue-500/25"
+              className="w-full bg-gradient-to-r from-green-600 to-indigo-600 text-white py-3 rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center space-x-2 font-medium shadow-lg shadow-blue-500/25"
             >
               {loading ? (
                 <Loader className="w-5 h-5 animate-spin" />
@@ -139,18 +146,16 @@ const Login = () => {
 
             {/* Divider */}
             <div className="relative my-6">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-200"></div>
-              </div>
+             
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">Don't have an account?</span>
+                <span className="px-2 text-gray-800">Don't have an account?</span>
               </div>
             </div>
 
             {/* Sign Up Link */}
             <Link
               to="/signup"
-              className="w-full flex items-center justify-center px-4 py-3 border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200"
+              className="w-full flex items-center justify-center px-4 py-3 border border-gray-200 rounded-lg text-gray-700 hover:bg-green-500 hover:border-gray-300 transition-all duration-200"
             >
               Create an account
             </Link>

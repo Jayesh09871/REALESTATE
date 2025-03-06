@@ -117,7 +117,7 @@ const PropertyListings = () => {
   }
 
   return (
-    <div className="min-h-screen pt-32 px-4 bg-gray-50">
+    <div className="min-h-screen pt-32 px-4 bg-orange-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
@@ -140,7 +140,7 @@ const PropertyListings = () => {
         </div>
 
         {/* Filters */}
-        <div className="bg-white p-4 rounded-lg shadow-sm mb-6">
+        <div className="bg-transparent p-4 rounded-lg shadow-sm mb-6">
           <div className="flex flex-col md:flex-row items-center gap-4">
             <div className="relative flex-1">
               <input
@@ -148,9 +148,9 @@ const PropertyListings = () => {
                 placeholder="Search properties..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full pl-10 pr-4 py-4 border rounded-lg outline-none bg-transparent"
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <Search className="absolute  left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             </div>
 
             <div className="flex items-center gap-4">
@@ -159,7 +159,7 @@ const PropertyListings = () => {
                 <select
                   value={filterType}
                   onChange={(e) => setFilterType(e.target.value)}
-                  className="border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+                  className="border rounded-lg px-3 py-2 outline-none bg-transparent"
                 >
                   <option value="all">All Types</option>
                   <option value="house">Houses</option>
@@ -172,7 +172,7 @@ const PropertyListings = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+                className="border rounded-lg px-3 py-2 outline-none bg-transparent"
               >
                 <option value="newest">Newest First</option>
                 <option value="price-low">Price: Low to High</option>
@@ -191,7 +191,7 @@ const PropertyListings = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-b from-orange-100 to-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 {/* Property Image */}
                 <div className="relative h-48">
@@ -209,7 +209,7 @@ const PropertyListings = () => {
                   <div className="absolute top-4 right-4 flex space-x-2">
                     <Link 
                       to={`/update/${property._id}`}
-                      className="p-2 bg-white/90 backdrop-blur-sm text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all"
+                      className="p-2 bg-white/90 backdrop-blur-sm text-green-600 rounded-full hover:bg-blue-600 hover:text-white transition-all"
                     >
                       <Edit3 className="w-4 h-4" />
                     </Link>
@@ -235,7 +235,7 @@ const PropertyListings = () => {
                   </div>
 
                   <div className="flex items-center justify-between mb-6">
-                    <p className="text-2xl font-bold text-blue-600">
+                    <p className="text-2xl font-bold text-green-600">
                       ₹{property.price.toLocaleString()}
                     </p>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${

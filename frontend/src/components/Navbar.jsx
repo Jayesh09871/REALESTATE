@@ -53,7 +53,7 @@ const Navbar = () => {
             <div className=" p-2 rounded-lg">
               <img src={logo} alt="logo" className="w-6 h-6 text-white " />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               REALSTATE
             </span>
           </Link>

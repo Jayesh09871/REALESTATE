@@ -32,7 +32,7 @@ const App = () => {
       FallbackComponent={ErrorFallback}
       onReset={() => window.location.reload()}
     >
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-orange-100">
         <Navbar />
         <AnimatePresence mode="wait">
           <motion.div

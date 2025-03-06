@@ -146,7 +146,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute left-0 right-0 mt-2 bg-orange-50 rounded-xl shadow-lg divide-y divide-gray-100 overflow-hidden bg-orange-50 "
+                    className="absolute left-0 right-0 mt-2 rounded-xl shadow-lg divide-y divide-gray-100 overflow-hidden bg-orange-50 "
                   >
                     <div className="p-2">
                       <h3 className="text-xs font-medium text-gray-500 px-3 mb-2 bg-orange-50 ">

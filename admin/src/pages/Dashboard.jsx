@@ -161,7 +161,7 @@ const Dashboard = () => {
 
   if (stats.loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-orange-50">
         <div className="text-center">
           <Loader className="w-8 h-8 text-blue-500 animate-spin mx-auto mb-4" />
           <p className="text-gray-600">Loading dashboard data...</p>
@@ -172,7 +172,7 @@ const Dashboard = () => {
 
   if (stats.error) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-orange-50">
         <div className="text-center">
           <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
           <h3 className="text-lg font-medium text-gray-900 mb-2">
@@ -196,7 +196,7 @@ const Dashboard = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="min-h-screen pt-32 px-4 bg-gray-50"
+      className="min-h-screen pt-32 px-4 bg-orange-50"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
