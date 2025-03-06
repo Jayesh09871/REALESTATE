@@ -1,5 +1,5 @@
-import nakulimage from '../images/nakul.png';
-import aayushimage from '../images/aayush.png';
+// import nakulimage from '../images/nakul.png';
+// import aayushimage from '../images/aayush.png';
 
 export const teamMembers = [
     {
