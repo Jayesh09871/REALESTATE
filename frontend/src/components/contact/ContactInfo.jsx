@@ -13,8 +13,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    content: 'support@REALSTATE.com',
-    link: 'mailto:support@REALSTATE.com',
+    content: 'support@REALESTATE.com',
+    link: 'mailto:support@REALESTATE.com',
   },
   {
     icon: MapPin,
