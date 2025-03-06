@@ -5,7 +5,7 @@ export const testimonials = [
       location: "New York, NY",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
       rating: 5,
-      text: "Found my dream home through REALSTATE. The process was seamless and their team was incredibly helpful throughout."
+      text: "Found my dream home through REALESTATE. The process was seamless and their team was incredibly helpful throughout."
     },
     {
       id: 2,

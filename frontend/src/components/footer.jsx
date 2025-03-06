@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Facebook, Github, Home, Instagram, Twitter } from 'lucide-react';
 import React, { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // FooterColumn component
@@ -74,11 +74,11 @@ const Newsletter = () => {
 
   return (
     <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
-      <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
+      {/* <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">
         Subscribe to newsletter
-      </p>
+      </p> */}
       
-      <form onSubmit={handleSubmit} className="mt-6">
+      {/* <form onSubmit={handleSubmit} className="mt-6">
         <div>
           <label htmlFor="email" className="sr-only">Email</label>
           <input
@@ -98,8 +98,8 @@ const Newsletter = () => {
         >
           Subscribe
         </button>
-      </form>
-      <ToastContainer />
+      </form> */}
+      {/* <ToastContainer /> */}
     </div>
   );
 };
@@ -127,7 +127,7 @@ const Footer = () => {
           <FooterColumn title="" className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
             <div className="flex items-center mb-4">
               <Home className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold">REALSTATE</span>
+              <span className="ml-2 text-xl font-bold">REALESTATE</span>
             </div>
             
             <p className="text-base leading-relaxed text-gray-600 mt-7">
@@ -166,7 +166,7 @@ const Footer = () => {
         <hr className="mt-16 mb-10 border-gray-200" />
         
         <p className="text-sm text-center text-gray-600">
-          © Copyright {new Date().getFullYear()}, All Rights Reserved by REALSTATE
+          © Copyright {new Date().getFullYear()}, All Rights Reserved by REALESTATE
         </p>
       </div>
     </section>

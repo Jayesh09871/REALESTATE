@@ -55,7 +55,7 @@ const register = async (req, res) => {
     const mailOptions = {
       from: process.env.EMAIL,
       to: email,
-      subject: "Welcome to REALSTATE - Your Account Has Been Created",
+      subject: "Welcome to REALESTATE - Your Account Has Been Created",
       html: getWelcomeTemplate(name)
     };
 
@@ -83,7 +83,7 @@ const forgotpassword = async (req, res) => {
     const mailOptions = {
       from: process.env.EMAIL,
       to: email,
-      subject: "Password Reset - REALSTATE Security",
+      subject: "Password Reset - REALESTATE Security",
       html: getPasswordResetTemplate(resetUrl)
     };
 
