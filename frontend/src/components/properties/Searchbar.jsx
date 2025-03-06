@@ -54,7 +54,7 @@ const SearchBar = ({ onSearch, className }) => {
 
   return (
     <div className={`relative ${className}`}>
-      <form onSubmit={handleSubmit} className="relative">
+      <form onSubmit={handleSubmit} className="relative ">
         <input
           type="text"
           placeholder="Search by location, property type..."
@@ -63,8 +63,7 @@ const SearchBar = ({ onSearch, className }) => {
           onFocus={() => setShowSuggestions(true)}
           onKeyDown={handleKeyDown}
           className="w-full pl-12 pr-20 py-3 rounded-lg border border-gray-200 
-            focus:border-blue-500 focus:ring-2 focus:ring-blue-200 
-            transition-all text-gray-800 placeholder-gray-400"
+           bg-transparent outline-none text-gray-800 placeholder-gray-400"
         />
         <Search 
           className="absolute left-4 top-1/2 transform -translate-y-1/2 
@@ -79,7 +78,7 @@ const SearchBar = ({ onSearch, className }) => {
               exit={{ scale: 0 }}
               type="button"
               onClick={clearSearch}
-              className="p-1.5 rounded-full hover:bg-gray-100 text-gray-400 
+              className="p-1.5 rounded-full hover:bg-gray-800 text-gray-400 
                 hover:text-gray-600 transition-colors"
             >
               <X className="h-4 w-4" />
@@ -87,8 +86,8 @@ const SearchBar = ({ onSearch, className }) => {
           )}
           <button 
             type="submit"
-            className="bg-blue-600 text-white px-4 py-1.5 rounded-lg 
-              hover:bg-blue-700 transition-colors flex items-center gap-2"
+            className="bg-orange-600 text-white px-4 py-1.5 rounded-lg 
+              hover:bg-orange-700 transition-colors flex items-center gap-2"
           >
             <Search className="h-4 w-4" />
             Search
@@ -103,7 +102,7 @@ const SearchBar = ({ onSearch, className }) => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg 
+            className="absolute top-full left-0 right-0 mt-2 bg-orange-50 rounded-lg 
               shadow-lg border border-gray-100 overflow-hidden z-50"
           >
             {recentSearches.length > 0 && (

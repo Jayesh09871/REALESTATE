@@ -111,7 +111,7 @@ const PropertyDetails = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 pt-16">
+      <div className="min-h-screen bg-orange-50 pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="animate-pulse">
             <div className="h-[500px] bg-gray-200 rounded-xl mb-8" />
@@ -141,7 +141,7 @@ const PropertyDetails = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-orange-50">
         <div className="text-center">
           <p className="text-red-500 mb-4">{error}</p>
           <Link
@@ -159,7 +159,7 @@ const PropertyDetails = () => {
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen bg-gray-50 pt-16"
+      className="min-h-screen bg-orange-50 pt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Navigation */}
@@ -189,7 +189,7 @@ const PropertyDetails = () => {
           </button>
         </nav>
 
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="bg-gradient-to-br from-orange-100 to-white rounded-xl shadow-lg overflow-hidden">
           {/* Image Gallery */}
           <div className="relative h-[500px] bg-gray-100 rounded-xl overflow-hidden mb-8">
             <AnimatePresence mode="wait">
@@ -258,7 +258,7 @@ const PropertyDetails = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <div className="bg-blue-50 rounded-lg p-6 mb-6">
-                  <p className="text-3xl font-bold text-blue-600 mb-2">
+                  <p className="text-3xl font-bold text-green-600 mb-2">
                     ₹{Number(property.price).toLocaleString('en-IN')}
                   </p>
                   <p className="text-gray-600">
@@ -296,7 +296,7 @@ const PropertyDetails = () => {
                 <button
                   onClick={() => setShowSchedule(true)}
                   className="w-full bg-blue-600 text-white py-3 rounded-lg 
-                    hover:bg-blue-700 transition-colors flex items-center 
+                    hover:bg-green-700 transition-colors flex items-center 
                     justify-center gap-2"
                 >
                   <Calendar className="w-5 h-5" />
