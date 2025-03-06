@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { toast } from "react-hot-toast";
 import axios from "axios";
+import React, { useState } from "react";
+import { toast } from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -19,7 +19,7 @@ const Login = () => {
     
     try {
       // Change the endpoint to /api/users/admin for admin login
-      const response = await axios.post(`http://localhost:4000/api/users/admin`, {
+      const response = await axios.post(`https://realestate-fa0y.onrender.com/api/users/admin`, {
         email,
         password
       });

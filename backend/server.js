@@ -1,18 +1,17 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
-import rateLimit from 'express-rate-limit';
-import helmet from 'helmet';
 import compression from 'compression';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import express from 'express';
+import helmet from 'helmet';
 import connectdb from './config/mongodb.js';
 import { trackAPIStats } from './middleware/statsMiddleware.js';
+import './models/statsModel.js';
 import propertyrouter from './routes/ProductRouter.js';
 import userrouter from './routes/UserRoute.js';
+import adminRouter from './routes/adminRoute.js';
+import appointmentRouter from './routes/appointmentRoute.js';
 import formrouter from './routes/formrouter.js';
 import newsrouter from './routes/newsRoute.js';
-import appointmentRouter from './routes/appointmentRoute.js';
-import adminRouter from './routes/adminRoute.js';
-import './models/statsModel.js';
 
 
 dotenv.config();
@@ -32,7 +31,7 @@ app.use(trackAPIStats);
 // CORS Configuration
 app.use(cors({
   origin: [
-    'http://localhost:4000',
+    'https://realestate-fa0y.onrender.com',
     'https://real-estate-website-backend-fullcode.onrender.com',
     'https://real-estate-website-sepia-two.vercel.app',
     'https://real-estate-backend-gamma-nine.vercel.app',

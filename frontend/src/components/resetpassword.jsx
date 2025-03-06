@@ -16,7 +16,7 @@ const ResetPassword = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post(`http://localhost:4000/api/users/reset/${token}`, { password });
+      const response = await axios.post(`https://realestate-fa0y.onrender.com/api/users/reset/${token}`, { password });
       if (response.data.success) {
         toast.success("Password reset successful!");
         navigate("/login");

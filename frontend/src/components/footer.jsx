@@ -59,7 +59,7 @@ const Newsletter = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/news/newsdata', { email });
+      const response = await axios.post('https://realestate-fa0y.onrender.com/news/newsdata', { email });
       if (response.status === 200) {
         toast.success('You have successfully subscribed to our newsletter!');
         setEmail(''); // Clear the input field

@@ -80,7 +80,7 @@ const ScheduleViewing = ({ propertyId, propertyTitle, onClose }) => {
     
       setLoading(true);
       const response = await axios.post(
-        `http://localhost:4000/api/appointments/schedule`, 
+        `https://realestate-fa0y.onrender.com/api/appointments/schedule`, 
         {
           propertyId,
           ...formData

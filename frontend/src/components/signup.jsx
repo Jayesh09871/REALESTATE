@@ -29,7 +29,7 @@ const Signup = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/users/register`, 
+        `https://realestate-fa0y.onrender.com/api/users/register`, 
         formData
       );
       if (response.data.success) {

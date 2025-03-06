@@ -46,7 +46,7 @@ export default function useContactForm() {
     e.preventDefault();
     if (validateForm()) {
       try {
-        const response = await axios.post(`http://localhost:4000/api/forms/submit`, formData);
+        const response = await axios.post(`https://realestate-fa0y.onrender.com/api/forms/submit`, formData);
         toast.success('Form submitted successfully!');
         // Reset form
         setFormData({ name: '', email: '', phone: '', message: '' });

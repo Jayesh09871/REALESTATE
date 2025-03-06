@@ -33,7 +33,7 @@ const PropertyDetails = () => {
     const fetchProperty = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:4000/api/products/single/${id}`);
+        const response = await axios.get(`https://realestate-fa0y.onrender.com/api/products/single/${id}`);
 
         if (response.data.success) {
           const propertyData = response.data.property;

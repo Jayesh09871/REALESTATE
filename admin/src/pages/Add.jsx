@@ -100,7 +100,7 @@ const PropertyForm = () => {
         formdata.append(`image${index + 1}`, image);
       });
 
-      const response = await axios.post(`http://localhost:4000/api/products/add`, formdata, {
+      const response = await axios.post(`https://realestate-fa0y.onrender.com/api/products/add`, formdata, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

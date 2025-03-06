@@ -27,7 +27,7 @@ const Appointments = () => {
   const fetchAppointments = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:4000/api/appointments/all`, {
+      const response = await axios.get(`https://realestate-fa0y.onrender.com/api/appointments/all`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
 
@@ -51,7 +51,7 @@ const Appointments = () => {
   const handleStatusChange = async (appointmentId, newStatus) => {
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/appointments/status`,
+        `https://realestate-fa0y.onrender.com/api/appointments/status`,
         {
           appointmentId,
           status: newStatus,
@@ -81,7 +81,7 @@ const Appointments = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:4000/api/appointments/update-meeting`,
+        `https://realestate-fa0y.onrender.com/api/appointments/update-meeting`,
         {
           appointmentId,
           meetingLink,

@@ -33,7 +33,7 @@ const PropertiesPage = () => {
   const fetchProperties = async () => {
     try {
       setPropertyState((prev) => ({ ...prev, loading: true }));
-      const response = await axios.get(`http://localhost:4000/api/products/list`);
+      const response = await axios.get(`https://realestate-fa0y.onrender.com/api/products/list`);
       if (response.data.success) {
         setPropertyState((prev) => ({
           ...prev,

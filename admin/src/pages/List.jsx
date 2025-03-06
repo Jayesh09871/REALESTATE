@@ -28,7 +28,7 @@ const PropertyListings = () => {
   const fetchProperties = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:4000/api/products/list`);
+      const response = await axios.get(`https://realestate-fa0y.onrender.com/api/products/list`);
       if (response.data.success) {
         const parsedProperties = response.data.property.map(property => ({
           ...property,
@@ -65,7 +65,7 @@ const PropertyListings = () => {
   const handleRemoveProperty = async (propertyId, propertyTitle) => {
     if (window.confirm(`Are you sure you want to remove "${propertyTitle}"?`)) {
       try {
-        const response = await axios.post(`http://localhost:4000/api/products/remove`, {
+        const response = await axios.post(`https://realestate-fa0y.onrender.com/api/products/remove`, {
           id: propertyId
         });
 

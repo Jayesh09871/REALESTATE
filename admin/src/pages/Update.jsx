@@ -31,7 +31,7 @@ const Update = () => {
   useEffect(() => {
     const fetchProperty = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/products/single/${id}`);
+        const response = await axios.get(`https://realestate-fa0y.onrender.com/api/products/single/${id}`);
         console.log('Response:', response); // Log the response
         if (response.data.success) {
           const property = response.data.property;
@@ -118,7 +118,7 @@ const Update = () => {
         formdata.append(`image${index + 1}`, image);
       });
 
-      const response = await axios.post(`http://localhost:4000/api/products/update`, formdata);
+      const response = await axios.post(`https://realestate-fa0y.onrender.com/api/products/update`, formdata);
       if (response.data.success) {
         toast.success('Property updated successfully');
         navigate('/list');

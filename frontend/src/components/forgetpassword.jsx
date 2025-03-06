@@ -13,7 +13,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post(`http://localhost:4000/api/users/forgot`, { email });
+      const response = await axios.post(`https://realestate-fa0y.onrender.com/api/users/forgot`, { email });
       if (response.data.success) {
         toast.success("Reset link sent to your email!");
       } else {

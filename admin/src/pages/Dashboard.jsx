@@ -98,7 +98,7 @@ const Dashboard = () => {
 
   const fetchStats = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/admin/stats`, {
+      const response = await axios.get(`https://realestate-fa0y.onrender.com/api/admin/stats`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       if (response.data.success) {
