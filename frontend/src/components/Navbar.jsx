@@ -175,7 +175,7 @@ const navLinks = [
   { name: "Home", path: "/" },
   { name: "Properties", path: "/properties" },
   { name: "About Us", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Appointments", path: "/contact" },
 ];
 
 const MobileNavLinks = ({
