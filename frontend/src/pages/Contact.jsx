@@ -1,5 +1,6 @@
 import axios from "axios";
 import { motion } from "framer-motion";
+import { useAuth } from '../context/AuthContext';
 import {
   Calendar,
   Check,
@@ -24,6 +25,7 @@ const Appointments = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [editingMeetingLink, setEditingMeetingLink] = useState(null);
   const [meetingLink, setMeetingLink] = useState("");
+  const { user } = useAuth();
 
   const fetchAppointments = async () => {
     try {
@@ -33,7 +35,7 @@ const Appointments = () => {
         { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
       );
       if (response.data.success) {
-        setAppointments(response.data.appointments.filter(apt => apt.userId && apt.propertyId));
+        setAppointments(response.data.appointments.filter(apt => apt.userId?.name === user.name));
       } else {
         toast.error(response.data.message);
       }
@@ -143,25 +145,25 @@ const Appointments = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredAppointments.map((appointment) => (
-              <motion.tr key={appointment._id} className="border-b hover:bg-gray-100">
-                <td className="p-4">{appointment.propertyId.title}</td>
-                <td className="p-4">{appointment.userId?.name}</td>
-                <td className="p-4">{new Date(appointment.date).toLocaleDateString()}</td>
-                <td className="p-4">
-  <span className={`px-2 py-1 rounded ${getStatusColor(appointment.status)}`}>
-    {appointment.status}
-  </span>
-</td>
+  {appointments.map((appointment) => (
+    <motion.tr key={appointment._id} className="border-b hover:bg-gray-100">
+      <td className="p-4">{appointment.userId?.name === user.name ? appointment.propertyId.title : ''}</td>
+      <td className="p-4">{appointment.userId?.name === user.name ? appointment.userId?.name : ''}</td>
+      <td className="p-4">{appointment.userId?.name === user.name ? new Date(appointment.date).toLocaleDateString() : ''}</td>
+      <td className="p-4">
+        <span className={`px-2 py-1 rounded ${appointment.userId?.name === user.name ? getStatusColor(appointment.status) : ''}`}>
+          {appointment.userId?.name === user.name ? appointment.status : ''}
+        </span>
+      </td>
+      <td className="p-4">
+        {appointment.userId?.name === user.name 
+          ? (appointment.meetingLink ? <a href={appointment.meetingLink} className="text-blue-500">View</a> : "No Link") 
+          : ''}
+      </td>
+    </motion.tr>
+  ))}
+</tbody>
 
-
-                <td className="p-4">
-                  {appointment.meetingLink ? <a href={appointment.meetingLink} className="text-blue-500">View</a> : "No Link"}
-                </td>
-               
-              </motion.tr>
-            ))}
-          </tbody>
         </table>
       </div>
     </div>
