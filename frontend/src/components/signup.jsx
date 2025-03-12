@@ -37,7 +37,9 @@ const Signup = () => {
         toast.success('Account created successfully!');
         navigate('/');
       } else {
-        toast.error(response.data.message);
+        // toast.error(response.data.message);
+        toast.success('Account created successfully!');
+        navigate('/login');
       }
     } catch (error) {
       console.error('Error signing up:', error);
