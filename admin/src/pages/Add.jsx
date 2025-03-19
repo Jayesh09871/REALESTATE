@@ -105,6 +105,7 @@ const PropertyForm = () => {
           'Content-Type': 'multipart/form-data'
         }
       });
+      
 
       if (response.data.success) {
         toast.success(response.data.message);

@@ -33,7 +33,7 @@ app.use(cors({
   origin: [
     'https://realestate-mocha-eight.vercel.app',
     'https://realestate-fa0y.onrender.com',
-    'realestate-g123.vercel.app',
+    'https://realestate-g123.vercel.app',
     'http://localhost:5174',
     'http://localhost:5173',
   ],
