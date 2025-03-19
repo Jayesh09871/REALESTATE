@@ -145,7 +145,7 @@ const Appointments = () => {
             </tr>
           </thead>
           <tbody>
-  {appointments.map((appointment) => (
+  {filteredAppointments.map((appointment) => (
     <motion.tr key={appointment._id} className="border-b hover:bg-gray-100">
       <td className="p-4">{appointment.userId?.name === user.name ? appointment.propertyId.title : ''}</td>
       <td className="p-4">{appointment.userId?.name === user.name ? appointment.userId?.name : ''}</td>
