@@ -75,6 +75,31 @@ server/
 
 ---
 
+## 👨‍👩‍👦 Contributors
+
+This project was developed by:
+
+### 1. Jayesh
+**Role:** Full Stack Developer  
+
+**Contributions:**  
+- Developed the frontend using React.js and Redux Toolkit  
+- Integrated Firebase for authentication and push notifications  
+- Implemented Google Maps API for location-based searches  
+- Designed and styled UI components using Tailwind CSS  
+
+### 2. Tohit
+**Role:** Backend Developer  
+
+**Contributions:**  
+- Developed RESTful APIs using Express.js  
+- Implemented MongoDB database using Mongoose ORM  
+- Integrated Cloudinary for image storage and upload  
+- Developed the messaging system using WebSockets (Socket.io)  
+- Implemented Stripe for secure payment transactions  
+
+---
+
 ## 🛠 How to Run the Project
 
 ### **1️⃣ Clone the Repository**
