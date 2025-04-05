@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/administrator.png";
 
@@ -116,6 +116,14 @@ export default function Navbar() {
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100"
               >
                 Appointments
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/messages"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100"
+              >
+                Messages
               </Link>
             </li>
           </ul>

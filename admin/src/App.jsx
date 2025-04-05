@@ -1,20 +1,21 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
+import { AnimatePresence, motion } from "framer-motion";
 import { ErrorBoundary } from "react-error-boundary";
-import { motion, AnimatePresence } from "framer-motion";
+import { Toaster } from "react-hot-toast";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 // Components
+import ErrorFallback from "./components/ErrorFallback";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
-import ErrorFallback from "./components/ErrorFallback";
 
 // Pages
 import Login from "./components/login";
+import Add from "./pages/Add";
+import Appointments from "./pages/Appointments";
 import Dashboard from "./pages/Dashboard";
 import List from "./pages/List";
-import Add from "./pages/Add";
+import Messages from "./pages/Messages";
 import Update from "./pages/Update";
-import Appointments from "./pages/Appointments";
 
 // Config
 export const backendurl = import.meta.env.VITE_BACKEND_URL;
@@ -54,6 +55,7 @@ const App = () => {
                 <Route path="/add" element={<Add />} />
                 <Route path="/update/:id" element={<Update />} />
                 <Route path="/appointments" element={<Appointments />} />
+                <Route path="/messages" element={<Messages />} />
               </Route>
 
               {/* 404 Route */}
