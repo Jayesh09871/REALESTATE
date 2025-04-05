@@ -174,8 +174,9 @@ const NavLinks = () => (
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "Properties", path: "/properties" },
+  { name: "Appointments", path: "/Appointments" },
   { name: "About Us", path: "/about" },
-  { name: "Appointments", path: "/contact" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const MobileNavLinks = ({
