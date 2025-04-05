@@ -14,6 +14,7 @@ import ResetPassword from './components/resetpassword';
 import Footer from './components/footer';
 import NotFoundPage from './components/Notfound';
 import { AuthProvider } from './context/AuthContext';
+import Appointments from './pages/Appointments';
 
 
 
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/about" element={<Aboutus />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/Appointments" element={<Appointments />} /> 
       </Routes>
       <Footer />
       <ToastContainer />

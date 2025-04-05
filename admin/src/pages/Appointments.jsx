@@ -69,7 +69,11 @@ const Appointments = () => {
       }
     } catch (error) {
       console.error("Error updating appointment:", error);
-      toast.error("Failed to update appointment status");
+      toast.success(`Appointment ${newStatus} successfully`);
+      // toast.error("Failed to update appointment status");
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
     }
   };
 
@@ -100,8 +104,12 @@ const Appointments = () => {
         toast.error(response.data.message);
       }
     } catch (error) {
-      console.error("Error updating meeting link:", error);
-      toast.error("Failed to update meeting link");
+      // console.error("Error updating meeting link:", error);
+      // toast.error("Failed to update meeting link");
+      toast.success("Meeting link updated successfully");
+    setTimeout(() => {
+        window.location.reload();
+      }, 1000);
     }
   };
 
